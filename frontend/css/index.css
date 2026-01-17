@@ -11,13 +11,13 @@ body {
   background-color: #fff;
 }
 
-.hero {
+.main {
   background: radial-gradient(circle at right, #2b2b2b, #000);
   color: #fff;
   padding: 80px 0;
 }
 
-.hero__container {
+.main__container {
   width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -25,27 +25,27 @@ body {
   justify-content: space-between;
 }
 
-.hero__category {
+.main__category {
   color: #00ff66;
   font-size: 14px;
   margin-bottom: 20px;
   display: inline-block;
 }
 
-.hero__title {
+.main__title {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 40px;
 }
 
-.hero__timer {
+.main__timer {
   display: flex;
   gap: 20px;
   margin-bottom: 40px;
 }
 
-.hero__time-box {
+.main__time-box {
     display: grid;
   background-color: #fff;
   color: #000;
@@ -56,17 +56,17 @@ body {
   padding-top: 23px;
 }
 
-.hero__time-number {
+.main__time-number {
   font-size: 20px;
   font-weight: 700;
 }
 
-.hero__time-label {
+.main__time-label {
   font-size: 12px;
   padding-bottom: 20px;
 }
 
-.hero__button {
+.main__button {
   background-color: #00ff66;
   color: white;
   padding: 16px 40px;
@@ -79,11 +79,11 @@ body {
 
 
 
-.hero__image {
+.main__image {
   width: 520px;
 }
 
-/* ================= PRODUCTS ================= */
+/*  PRODUCTS  */
 .products {
   padding: 80px 0;
 }
@@ -100,9 +100,12 @@ body {
   margin-bottom: 40px;
 }
 
+
 .products__label {
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
+  color: darkred;
+  
 }
 
 .products__title {
