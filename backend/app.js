@@ -4,10 +4,17 @@ const express = require('express')
 const { default: mongoose } = require('mongoose')
 const session = require('express-session')
 const errorMiddleware = require('./middlewares/error.middleware')
+const cors = require('cors')
 
 const app = express()
 
 // Middlewares
+app.use(
+	cors({
+		origin: process.env.FRONTEND_URL || '*',
+		credentials: true,
+	}),
+)
 app.use(express.json())
 app.use(
 	session({
