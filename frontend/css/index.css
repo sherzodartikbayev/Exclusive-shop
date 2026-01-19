@@ -4,17 +4,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-<<<<<<< HEAD
-  font-family: Inter, sans-serif;
 }
 
 body {
   background-color: #fff;
 }
 
-.hero {
-=======
-}
+
 
 body {
   font-family: "Poppins", sans-serif;
@@ -243,6 +239,7 @@ li {
 .flash__container {
   padding: 0 135px 60px 135px;
   border-bottom: 0.5px solid rgb(212, 201, 201);
+  margin-bottom: 80px;
 }
 
 .flash__top {
@@ -423,61 +420,45 @@ li {
 /* main */
 
 .main {
->>>>>>> 2133089119ef53dddf17f3f24029ba823aa7ab07
-  background: radial-gradient(circle at right, #2b2b2b, #000);
   color: #fff;
   padding: 80px 0;
 }
 
-<<<<<<< HEAD
-.hero__container {
-=======
 .main__container {
->>>>>>> 2133089119ef53dddf17f3f24029ba823aa7ab07
-  width: 1200px;
-  margin: 0 auto;
+  padding: 140px 135px 71px 135px;
+}
+
+.main_flex {
+  padding: 69px 44px 69px 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: radial-gradient(circle at right, #2b2b2b, #000);
+  
 }
 
-<<<<<<< HEAD
-.hero__category {
-=======
 .main__category {
->>>>>>> 2133089119ef53dddf17f3f24029ba823aa7ab07
   color: #00ff66;
   font-size: 14px;
   margin-bottom: 20px;
   display: inline-block;
 }
 
-<<<<<<< HEAD
-.hero__title {
-=======
 .main__title {
->>>>>>> 2133089119ef53dddf17f3f24029ba823aa7ab07
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 40px;
 }
 
-<<<<<<< HEAD
-.hero__timer {
-=======
 .main__timer {
->>>>>>> 2133089119ef53dddf17f3f24029ba823aa7ab07
   display: flex;
   gap: 20px;
   margin-bottom: 40px;
 }
 
-<<<<<<< HEAD
-.hero__time-box {
-=======
+
 .main__time-box {
->>>>>>> 2133089119ef53dddf17f3f24029ba823aa7ab07
     display: grid;
   background-color: #fff;
   color: #000;
@@ -488,29 +469,17 @@ li {
   padding-top: 23px;
 }
 
-<<<<<<< HEAD
-.hero__time-number {
-=======
 .main__time-number {
->>>>>>> 2133089119ef53dddf17f3f24029ba823aa7ab07
   font-size: 20px;
   font-weight: 700;
 }
 
-<<<<<<< HEAD
-.hero__time-label {
-=======
 .main__time-label {
->>>>>>> 2133089119ef53dddf17f3f24029ba823aa7ab07
   font-size: 12px;
   padding-bottom: 20px;
 }
 
-<<<<<<< HEAD
-.hero__button {
-=======
 .main__button {
->>>>>>> 2133089119ef53dddf17f3f24029ba823aa7ab07
   background-color: #00ff66;
   color: white;
   padding: 16px 40px;
@@ -523,19 +492,16 @@ li {
 
 
 
-<<<<<<< HEAD
 .hero__image {
   width: 520px;
 }
 
 /* ================= PRODUCTS ================= */
-=======
 .main__image {
   width: 520px;
 }
 
 /*  PRODUCTS  */
->>>>>>> 2133089119ef53dddf17f3f24029ba823aa7ab07
 .products {
   padding: 80px 0;
 }
@@ -552,18 +518,15 @@ li {
   margin-bottom: 40px;
 }
 
-<<<<<<< HEAD
 .products__label {
   font-size: 14px;
   cursor: pointer;
-=======
+}
 
 .products__label {
   font-size: 15px;
   cursor: pointer;
   color: darkred;
-  
->>>>>>> 2133089119ef53dddf17f3f24029ba823aa7ab07
 }
 
 .products__title {
