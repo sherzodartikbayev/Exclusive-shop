@@ -113,6 +113,10 @@ li {
   gap: 22px;
 }
 
+.navbar__right img {
+  cursor: pointer;
+}
+
 .navbar__form {
   width: 243px;
   height: 38px;
@@ -138,7 +142,6 @@ li {
 .form__btn {
   background: none;
   border: none;
-  cursor: pointer;
 }
 
 /* Hero */
@@ -234,6 +237,10 @@ li {
   gap: 12px;
 }
 
+.hero__right__bottom img {
+  cursor: pointer;
+}
+
 /* Flash */
 
 .flash__container {
@@ -303,13 +310,14 @@ li {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-left: 380px;
+  margin-left:auto;
 }
 
 .flesh__arrows {
   padding: 11px;
   background-color: #F5F5F5;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 /* flash card */
@@ -392,6 +400,7 @@ li {
   padding: 5px;
   background-color: white;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .flash__card__like:last-child {
