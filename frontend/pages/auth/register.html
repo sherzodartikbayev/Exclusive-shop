@@ -52,19 +52,20 @@
     <section class="login">
       <div class="container login__container">
         <div class="">
-          <img src="/frontend/images/Login page/cart phone.png" alt="" class="login__img" />
+          <img src="../../images/Login page/cart phone.png" alt="" class="login__img" />
         </div>
         <div class="">
           <h1 class="login__title">Log in to Exclusive</h1>
           <p class="login__text">Enter your details below</p>
-          <form action="" class="login__form">
-            <input type="text" class="login__input" placeholder="Name" />
-            <input type="email" class="login__input" placeholder="Email or Phone Number" />
-            <input type="password" class="login__input" placeholder="Password" />
+          <form action="" class="login__form" id="form">
+            <input type="text" class="login__input" placeholder="Name" name="name" id="name" required />
+            <input type="email" class="login__input" placeholder="Email" name="email" id="email" required />
+            <input type="password" class="login__input" placeholder="Password" name="password" id="password" required />
+
             <div class="login__btn__box">
               <button type="submit" class="login__btn">Create Account</button>
-              <button type="submit" class="login__second__btn"><img src="/frontend/images/Login page/Google.svg"
-                  alt="">Sign up with Google</button>
+              <button type="submit" class="login__second__btn"><img src="../../images/Login page/Google.svg" alt="">Sign
+                up with Google</button>
             </div>
             <div class="">
               <a href="#" class="login__forgot__link">Already have account?</a>
@@ -147,6 +148,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="../../js/auth/register.js"></script>
 </body>
 
 </html>
