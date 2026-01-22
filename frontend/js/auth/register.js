@@ -2,6 +2,7 @@ const form = document.querySelector('#form')
 const name = document.querySelector('#name')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
+const registerBtn = document.querySelector('#register__btn')
 
 form.addEventListener('submit', e => {
 	e.preventDefault()
@@ -16,18 +17,29 @@ form.addEventListener('submit', e => {
 })
 
 async function register(data) {
-	try {
-		const req = await fetch(
-			'https://exclusive-shop-yisx.vercel.app/auth/register',
-			{
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(data),
-			},
-		)
+	let state = 'Create Account'
 
-		console.log(req.statusText)
+	try {
+		registerBtn.textContent = state = 'Loading...'
+
+		const req = await fetch('http://localhost:8080/auth/register', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(data),
+		})
+
+		if (req.ok) {
+			window.location = '../../pages/auth/login.html'
+			alert(
+				'Your account has been successfully registered! We sent message for verify to your email. After verification you can login.',
+			)
+		}
+
+		console.log(req.status, req.statusText)
 	} catch (error) {
 		console.log(error)
+	} finally {
+		form.reset()
+		registerBtn.textContent = state = 'Create Account'
 	}
 }

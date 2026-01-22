@@ -22,7 +22,7 @@
         </div>
         <div class="header__top__right">
           <a href="#" class="top__links">English</a>
-          <img src="/frontend/images/header/dropdown.svg" alt="" />
+          <img src="../../images/header/dropdown.svg" alt="" />
         </div>
       </div>
       <nav class="navbar">
@@ -37,7 +37,7 @@
           <form action="" class="navbar__form">
             <input type="text" class="form__input" placeholder="What are you looking for?" />
             <button type="submit" class="form__btn">
-              <img src="/frontend/images/header/search.svg" alt="" />
+              <img src="../../images/header/search.svg" alt="" />
             </button>
           </form>
         </div>
@@ -50,17 +50,17 @@
     <section class="login">
       <div class="container login__container">
         <div class="">
-          <img src="/frontend/images/Login page/cart phone.png" alt="" class="login__img" />
+          <img src="../../images/Login page/cart phone.png" alt="" class="login__img" />
         </div>
         <div class="">
           <h1 class="login__title">Log in to Exclusive</h1>
           <p class="login__text">Enter your details below</p>
-          <form action="" class="login__form">
-            <input type="email" class="login__input" placeholder="Email or Phone Number" />
-            <input type="password" class="login__input" placeholder="Password" />
+          <form action="" class="login__form" id="form">
+            <input type="email" name="email" id="email" class="login__input" placeholder="Email" />
+            <input type="password" name="password" id="password" class="login__input" placeholder="Password" />
             <div class="login__btn__box">
-              <button type="submit" class="login__btn">Log In</button>
-              <a href="#" class="login__forgot__link">Forget Password?</a>
+              <button type="submit" class="login__btn" id="login__btn">Log In</button>
+              <a href="./forget-password.html" class="login__forgot__link">Forget Password?</a>
             </div>
           </form>
         </div>
@@ -79,8 +79,8 @@
             <a href="#" class="footer__text">Get 10% off your first order</a>
             <form action="" class="footer__form">
               <input type="text" class="footer__form__input" placeholder="Enter your email">
-              <button type="submit" class="footer__form__btn"><img src="/frontend/images/Login page/send icon.svg"
-                  alt=""></button>
+              <button type="submit" class="footer__form__btn">
+                <img src="../../images/Login page/send icon.svg" alt=""></button>
             </form>
           </div>
         </div>
@@ -119,26 +119,28 @@
           <h4 class="footer__subtitle">Download App</h4>
           <a href="#" class="footer__mini__text">Save $3 with App New User Only</a>
           <div class="footer__source__box">
-            <img src="/frontend/images/Login page/QR Code.png" alt="">
+            <img src="../../images/Login page/QR Code.png" alt="">
             <div class="download__box">
-              <img src="/frontend/images/Login page/google play.png" alt="">
-              <img src="/frontend/images/Login page/appstore.png" alt="">
+              <img src="../../images/Login page/google play.png" alt="">
+              <img src="../../images/Login page/appstore.png" alt="">
             </div>
           </div>
           <div class="footer__social__box">
-            <img src="/frontend/images/Login page/Facebook.svg" alt="">
-            <img src="/frontend/images/Login page/Twitter.svg" alt="">
-            <img src="/frontend/images/Login page/Instagram.svg" alt="">
-            <img src="/frontend/images/Login page/Linkedin.svg" alt="">
+            <img src="../../images/Login page/Facebook.svg" alt="">
+            <img src="../../images/Login page/Twitter.svg" alt="">
+            <img src="../../images/Login page/Instagram.svg" alt="">
+            <img src="../../images/Login page/Linkedin.svg" alt="">
           </div>
         </div>
       </div>
       <div class="footer__bottom">
-        <img src="/frontend/images/Login page/icon copyright.svg" alt="">
+        <img src="../../images/Login page/icon copyright.svg" alt="">
         <p class="footer__text">Copyright Rimel 2022. All right reserved</p>
       </div>
     </div>
   </footer>
+
+  <script src="../../js/auth/login.js"></script>
 </body>
 
 </html>
