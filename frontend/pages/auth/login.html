@@ -57,7 +57,16 @@
           <p class="login__text">Enter your details below</p>
           <form action="" class="login__form" id="form">
             <input type="email" name="email" id="email" class="login__input" placeholder="Email" />
-            <input type="password" name="password" id="password" class="login__input" placeholder="Password" />
+
+            <div class="password-hide">
+              <input type="password" class="login__input" placeholder="Password" name="password" id="password"
+                required />
+
+              <div class="password-hide-toggle">
+                <img src="../../images/flash/eye.svg" alt="eye">
+              </div>
+            </div>
+
             <div class="login__btn__box">
               <button type="submit" class="login__btn" id="login__btn">Log In</button>
               <a href="./forget-password.html" class="login__forgot__link">Forget Password?</a>

@@ -60,7 +60,15 @@
           <form action="" class="login__form" id="form">
             <input type="text" class="login__input" placeholder="Name" name="name" id="name" required />
             <input type="email" class="login__input" placeholder="Email" name="email" id="email" required />
-            <input type="password" class="login__input" placeholder="Password" name="password" id="password" required />
+
+            <div class="password-hide">
+              <input type="password" class="login__input" placeholder="Password" name="password" id="password"
+                required />
+
+              <div class="password-hide-toggle">
+                <img src="../../images/flash/eye.svg" alt="eye">
+              </div>
+            </div>
 
             <div class="login__btn__box">
               <button type="submit" class="login__btn" id="register__btn">Create Account</button>
