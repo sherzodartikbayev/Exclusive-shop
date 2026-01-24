@@ -110,6 +110,7 @@ li {
 .cart__breadcrumb {
   color: #888;
   margin-bottom: 32px;
+  cursor: pointer;
 }
 
 .cart__table {
