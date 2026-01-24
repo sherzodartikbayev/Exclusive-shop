@@ -21,6 +21,11 @@ app.use(
 		secret: process.env.SECRET_KEY,
 		saveUninitialized: false,
 		resave: false,
+		cookie: {
+			secure: false,
+			httpOnly: true,
+			sameSite: 'lax',
+		},
 	}),
 )
 
