@@ -25,9 +25,10 @@ li {
 	/* padding: 0 135px; */
 }
 
-.header {
+.top__header {
 	background-color: black;
-}
+	}
+
 
 .header__top {
 	display: flex;
