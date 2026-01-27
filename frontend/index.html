@@ -1,192 +1,311 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Products Page</title>
+    <link rel="stylesheet" href="../frontend/css/products.css" />
+    <link rel="icon" href="../images/Frame 619.svg" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Products Page</title>
-  <link rel="stylesheet" href="../frontend/css/products.css" />
-  <link rel="icon" href="../images/Frame 619.svg">
-</head>
+  <body>
+    <!-- js -->
+    <script src="./js/script.js"></script>
+    <!-- js -->
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__content">
+          <span class="hero__category">Categories</span>
+          <h1 class="hero__title">
+            Enhance Your<br />
+            Music Experience
+          </h1>
 
-<body>
-<!-- js -->
-<script src="./js/script.js"></script>
-<!-- js -->
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero__container">
-      <div class="hero__content">
-        <span class="hero__category">Categories</span>
-        <h1 class="hero__title">
-          Enhance Your<br />
-          Music Experience
-        </h1>
+          <div class="hero__timer">
+            <div class="hero__time-box">
+              <span class="hero__time-number">23</span>
+              <span class="hero__time-label">Hours</span>
+            </div>
+            <div class="hero__time-box">
+              <span class="hero__time-number">05</span>
+              <span class="hero__time-label">Days</span>
+            </div>
+            <div class="hero__time-box">
+              <span class="hero__time-number">59</span>
+              <span class="hero__time-label">Minutes</span>
+            </div>
+            <div class="hero__time-box">
+              <span class="hero__time-number">35</span>
+              <span class="hero__time-label">Seconds</span>
+            </div>
+          </div>
 
-        <div class="hero__timer">
-          <div class="hero__time-box">
-            <span class="hero__time-number">23</span>
-            <span class="hero__time-label">Hours</span>
-          </div>
-          <div class="hero__time-box">
-            <span class="hero__time-number">05</span>
-            <span class="hero__time-label">Days</span>
-          </div>
-          <div class="hero__time-box">
-            <span class="hero__time-number">59</span>
-            <span class="hero__time-label">Minutes</span>
-          </div>
-          <div class="hero__time-box">
-            <span class="hero__time-number">35</span>
-            <span class="hero__time-label">Seconds</span>
+          <button class="hero__button">Buy Now!</button>
+        </div>
+
+        <div class="hero__image-wrapper">
+          <img
+            src="../frontend/images/kalonka.png"
+            alt="Speaker"
+            class="hero__image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products">
+      <div class="products__container">
+        <div class="products__header">
+          <span class="products__label"
+            ><img src="../images/Frame 619.svg" alt=""
+          /></span>
+          <h2 class="products__title">Explore Our Products</h2>
+
+          <div class="products__arrows">
+            <button class="products__arrow">←</button>
+            <button class="products__arrow">→</button>
           </div>
         </div>
 
-        <button class="hero__button">Buy Now!</button>
-      </div>
+        <div class="products__grid">
+          <!-- CARD1 -->
+          <div class="product-card">
+            <div class="product-card__image-wrapper">
+              <img
+                src="../frontend/images/собачий корм.png"
+                alt=""
+                class="product-card__image"
+              />
+              <div class="product-card__actions">
+                <button class="product-card__icon">♡</button>
+                <button class="product-card__icon">👁</button>
+              </div>
+            </div>
+            <h3 class="product-card__title">Breed Dry Dog Food</h3>
+            <div class="product-card__price">$100</div>
+            <div class="product-card__rating">★★★ <span>(35)</span></div>
+          </div>
 
-      <div class="hero__image-wrapper">
-        <img src="../frontend/images/kalonka.png" alt="Speaker" class="hero__image" />
+          <!-- CARD2 -->
+          <div class="product-card">
+            <div class="product-card__image-wrapper">
+              <img
+                src="../frontend/images/Frame 604.png"
+                alt=""
+                class="product-card__image"
+              />
+              <div class="product-card__actions">
+                <button class="product-card__icon">♡</button>
+                <button class="product-card__icon">👁</button>
+              </div>
+            </div>
+            <h3 class="product-card__title">CANON EOS DSLR Camera</h3>
+            <div class="product-card__price">$360</div>
+            <div class="product-card__rating">★★★★ <span>(95)</span></div>
+          </div>
+
+          <!-- CARD3 -->
+          <div class="product-card">
+            <div class="product-card__image-wrapper">
+              <img
+                src="../frontend/images/Frame laptop.png"
+                alt=""
+                class="product-card__image"
+              />
+              <div class="product-card__actions">
+                <button class="product-card__icon">♡</button>
+                <button class="product-card__icon">👁</button>
+              </div>
+            </div>
+            <h3 class="product-card__title">ASUS FHD Gaming Laptop</h3>
+            <div class="product-card__price">$700</div>
+            <div class="product-card__rating">★★★★★ <span>(325)</span></div>
+          </div>
+
+          <!-- CARD3 -->
+          <div class="product-card">
+            <div class="product-card__image-wrapper">
+              <img
+                src="../frontend/images/kremlar.png"
+                alt=""
+                class="product-card__image"
+              />
+              <div class="product-card__actions">
+                <button class="product-card__icon">♡</button>
+                <button class="product-card__icon">👁</button>
+              </div>
+            </div>
+            <h3 class="product-card__title">Curology Product Set</h3>
+            <div class="product-card__price">$500</div>
+            <div class="product-card__rating">★★★★ <span>(145)</span></div>
+          </div>
+
+          <!-- CARD4 -->
+          <div class="product-card">
+            <div class="product-card__image-wrapper">
+              <img
+                src="../frontend/images/mercedes-benz2.png"
+                alt=""
+                class="product-card__image"
+              />
+              <div class="product-card__actions">
+                <button class="product-card__icon">♡</button>
+                <button class="product-card__icon">👁</button>
+              </div>
+            </div>
+            <h3 class="product-card__title">Kids Electric Car</h3>
+            <div class="product-card__price">$960</div>
+            <div class="product-card__rating">★★★★★ <span>(65)</span></div>
+          </div>
+
+          <!-- CARD4 -->
+          <div class="product-card">
+            <div class="product-card__image-wrapper">
+              <img
+                src="../frontend/images/butsi.png"
+                alt=""
+                class="product-card__image"
+              />
+              <div class="product-card__actions">
+                <button class="product-card__icon">♡</button>
+                <button class="product-card__icon">👁</button>
+              </div>
+            </div>
+            <h3 class="product-card__title">Jr. Zoom Soccer Cleats</h3>
+            <div class="product-card__price">$1160</div>
+            <div class="product-card__rating">★★★★★ <span>(35)</span></div>
+          </div>
+
+          <!-- CARD4 -->
+          <div class="product-card">
+            <div class="product-card__image-wrapper">
+              <img
+                src="../frontend/images/игровой консоль.png"
+                alt=""
+                class="product-card__image"
+              />
+              <div class="product-card__actions">
+                <button class="product-card__icon">♡</button>
+                <button class="product-card__icon">👁</button>
+              </div>
+            </div>
+            <h3 class="product-card__title">GP11 Shooter USB Gamepad</h3>
+            <div class="product-card__price">$660</div>
+            <div class="product-card__rating">★★★★★ <span>(55)</span></div>
+          </div>
+
+          <!-- CARD4 -->
+          <div class="product-card">
+            <div class="product-card__image-wrapper">
+              <img
+                src="../frontend/images/куртка.png"
+                alt=""
+                class="product-card__image"
+              />
+              <div class="product-card__actions">
+                <button class="product-card__icon">♡</button>
+                <button class="product-card__icon">👁</button>
+              </div>
+            </div>
+            <h3 class="product-card__title">Quilted Satin Jacket</h3>
+            <div class="product-card__price">$660</div>
+            <div class="product-card__rating">★★★★★ <span>(55)</span></div>
+          </div>
+        </div>
+
+        <!-- timur -->
+        <!-- <button class="products__button">View All Products</button>
       </div>
+    </section>
+
+    <main>
+      <section>
+        <div class="categories">
+          <img src="./images/qizil torburchek.svg" alt="" />
+
+          <h2 class="qizil">Categories</h2>
+        </div>
+
+        <div class="browse_catygory">
+          <h1>Browse By Category</h1>
+
+          <img src="./images/left right.svg" alt="" />
+        </div>
+
+        <div class="texnikala">
+          <div class="card">
+            <div class="icon">
+              <img src="./images/phone.png" alt="" />
+            </div>
+
+            <div class="text">Phones</div>
+          </div>
+
+          <div class="card">
+            <div class="icon">
+              <img src="./images/computer.svg" alt="" />
+            </div>
+
+            <div class="text">Computers</div>
+          </div>
+
+          <div class="card">
+            <div class="icon">
+              <img src="./images/smart watch.svg" alt="" />
+            </div>
+
+            <div class="text">SmartWatch</div>
+          </div>
+
+          <div class="card">
+            <div class="icon">
+              <img src="./images/camera (2).svg" alt="" />
+            </div>
+
+            <div class="text">Camera</div>
+          </div>
+
+          <div class="card">
+            <div class="icon">
+              <img src="./images/naushnik.svg" alt="" />
+            </div>
+
+            <div class="text">HeadPhones</div>
+          </div>
+
+          <div class="card">
+            <div class="icon">
+              <img src="./images/game pad.svg" alt="" />
+            </div>
+
+            <div class="text">Gaming</div>
+          </div>
+        </div>
+
+        </div>
+      </section> -->
+
+      <!--  -->
+      <!-- <section class="products">
+    <div class="products-header">
+        <div>
+            <span class="badge"></span>
+            <div class="qizil_view">
+              <img src="./images/qizil torburchek.svg" alt="">
+            <p class="subtitle">This Month</p>
+            </div>
+
+            <h2>Best Selling Products</h2>
+        </div>
+          
+        <p class="view-all">View All</p>
+
     </div>
-  </section>
 
-  <!-- PRODUCTS SECTION -->
-  <section class="products">
-    <div class="products__container">
-      <div class="products__header">
-        <span class="products__label"><img src="../images/Frame 619.svg" alt=""></span>
-        <h2 class="products__title">Explore Our Products</h2>
+   
+</section> -->
 
-        <div class="products__arrows">
-          <button class="products__arrow">←</button>
-          <button class="products__arrow">→</button>
-        </div>
-      </div>
-
-      <div class="products__grid">
-
-        <!-- CARD1 -->
-        <div class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="../frontend/images/собачий корм.png" alt="" class="product-card__image" />
-            <div class="product-card__actions">
-              <button class="product-card__icon">♡</button>
-              <button class="product-card__icon">👁</button>
-            </div>
-          </div>
-          <h3 class="product-card__title">Breed Dry Dog Food</h3>
-          <div class="product-card__price">$100</div>
-          <div class="product-card__rating">★★★ <span>(35)</span></div>
-        </div>
-
-        <!-- CARD2 -->
-        <div class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="../frontend/images/Frame 604.png" alt="" class="product-card__image" />
-            <div class="product-card__actions">
-              <button class="product-card__icon">♡</button>
-              <button class="product-card__icon">👁</button>
-            </div>
-          </div>
-          <h3 class="product-card__title">CANON EOS DSLR Camera</h3>
-          <div class="product-card__price">$360</div>
-          <div class="product-card__rating">★★★★ <span>(95)</span></div>
-        </div>
-
-
- <!-- CARD3 -->
-        <div class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="../frontend/images/Frame laptop.png" alt="" class="product-card__image" />
-            <div class="product-card__actions">
-              <button class="product-card__icon">♡</button>
-              <button class="product-card__icon">👁</button>
-            </div>
-          </div>
-          <h3 class="product-card__title">ASUS FHD Gaming Laptop</h3>
-          <div class="product-card__price">$700</div>
-          <div class="product-card__rating">★★★★★ <span>(325)</span></div>
-        </div>
-
- <!-- CARD3 -->
-        <div class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="../frontend/images/kremlar.png" alt="" class="product-card__image" />
-            <div class="product-card__actions">
-              <button class="product-card__icon">♡</button>
-              <button class="product-card__icon">👁</button>
-            </div>
-          </div>
-          <h3 class="product-card__title">Curology Product Set </h3>
-          <div class="product-card__price">$500</div>
-          <div class="product-card__rating">★★★★ <span>(145)</span></div>
-        </div>
-
- <!-- CARD4 -->
-        <div class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="../frontend/images/mercedes-benz2.png" alt="" class="product-card__image" />
-            <div class="product-card__actions">
-              <button class="product-card__icon">♡</button>
-              <button class="product-card__icon">👁</button>
-            </div>
-          </div>
-          <h3 class="product-card__title">Kids Electric Car</h3>
-          <div class="product-card__price">$960</div>
-          <div class="product-card__rating">★★★★★ <span>(65)</span></div>
-        </div>
-
-
-<!-- CARD4 -->
-        <div class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="../frontend/images/butsi.png" alt="" class="product-card__image" />
-            <div class="product-card__actions">
-              <button class="product-card__icon">♡</button>
-              <button class="product-card__icon">👁</button>
-            </div>
-          </div>
-          <h3 class="product-card__title">Jr. Zoom Soccer Cleats</h3>
-          <div class="product-card__price">$1160</div>
-          <div class="product-card__rating">★★★★★ <span>(35)</span></div>
-        </div>
-
-
-        <!-- CARD4 -->
-        <div class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="../frontend/images/игровой консоль.png" alt="" class="product-card__image" />
-            <div class="product-card__actions">
-              <button class="product-card__icon">♡</button>
-              <button class="product-card__icon">👁</button>
-            </div>
-          </div>
-          <h3 class="product-card__title">GP11 Shooter USB Gamepad</h3>
-          <div class="product-card__price">$660</div>
-          <div class="product-card__rating">★★★★★ <span>(55)</span></div>
-        </div>
-
-
-        <!-- CARD4 -->
-        <div class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="../frontend/images/куртка.png" alt="" class="product-card__image" />
-            <div class="product-card__actions">
-              <button class="product-card__icon">♡</button>
-              <button class="product-card__icon">👁</button>
-            </div>
-          </div>
-          <h3 class="product-card__title">Quilted Satin Jacket</h3>
-          <div class="product-card__price">$660</div>
-          <div class="product-card__rating">★★★★★ <span>(55)</span></div>
-        </div>
-
-
-      </div>
-
-      <button class="products__button">View All Products</button>
-    </div>
-  </section>
-
-</body>
+    </main>
+  </body>
 </html>
