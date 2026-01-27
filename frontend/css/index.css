@@ -67,6 +67,7 @@ li {
 }
 
 /* Navbar */
+
 .navbar {
 	display: flex;
 	align-items: center;
@@ -498,7 +499,7 @@ li {
 	width: 520px;
 }
 
-/* ================= PRODUCTS ================= */
+/*  PRODUCTS  */
 .main__image {
 	width: 520px;
 }

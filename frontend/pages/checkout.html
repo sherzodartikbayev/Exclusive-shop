@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Cart</title>
-  <link rel="stylesheet" href="../css/cart.css">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../css/checkout.css">
 </head>
 
 <body>
   <header class="header container">
-    <nav class="navbar ">
+    <nav class="navbar container">
       <a href="#" class="navbar__title">Exclusive</a>
       <ul class="nav__list">
         <li><a href="#" target="_blank" class="nav__list__item">Home</a></li>
@@ -32,83 +32,60 @@
 
   <main>
     <section>
-      <div class="cart">
-        <div class="cart__breadcrumb">
-          Home / Cart
+      <div class="checkout">
+        <div class="checkout__breadcrumb">
+          Account / My Account / Product / View Cart / Checkout
         </div>
-
-        <div class="cart__table">
-
-          <div class="cart__head">
-            <span>Product</span>
-            <span>Price</span>
-            <span>Quantity</span>
-            <span>Subtotal</span>
+        <div class="checkout__content">
+          <!-- LEFT -->
+          <div class="checkout__form">
+            <h2>Billing Details</h2>
+            <input placeholder="First Name*">
+            <input placeholder="Company Name">
+            <input placeholder="Street Address*">
+            <input placeholder="Apartment, floor, etc. (optional)">
+            <input placeholder="Town/City*">
+            <input placeholder="Phone Number*">
+            <input placeholder="Email Address*">
+            <label class="checkout__save">
+              Save this information for faster check-out next time
+            </label>
           </div>
-
-          <!-- ITEM -->
-          <div class="cart__row">
-            <div class="cart__product">
-              <img src="../images/flash/screen.png" alt="" class="screen2">
-              <span>LCD Monitor</span>
+          <!-- RIGHT -->
+          <div class="checkout__summary">
+            <div class="checkout__product">
+              <span> <img src="../images/flash/pult.png" alt="" class="pult"> LCD Monitor</span>
+              <span>$650</span>
             </div>
-
-            <span class="cart__price">$650</span>
-
-            <input class="cart__qty" type="number" value="1">
-
-            <span class="cart__subtotal">$650</span>
-          </div>
-
-          <div class="cart__row">
-            <div class="cart__product">
-              <img src="../images/flash/pult.png" alt="" class="pult2">
-              <span>HI Gamepad</span>
+            <div class="checkout__product">
+              <span><img src="../images/flash/screen.png" alt="" class="screen"> HI Gamepad</span>
+              <span>$1100</span>
             </div>
-
-            <span class="cart__price">$550</span>
-
-            <input class="cart__qty" type="number" value="2">
-
-            <span class="cart__subtotal">$1100</span>
-          </div>
-
-        </div>
-
-        <div class="cart__actions">
-          <button class="cart__btn">Return To Shop</button>
-          <button class="cart__btn">Update Cart</button>
-        </div>
-
-        <div class="cart__bottom">
-
-          <div class="cart__coupon">
-            <input type="text" placeholder="Coupon Code">
-            <button>Apply Coupon</button>
-          </div>
-
-          <div class="cart__total">
-            <h3>Cart Total</h3>
-            <div class="cart__total-row">
+            <div class="checkout__line"></div>
+            <div class="checkout__product">
               <span>Subtotal:</span>
               <span>$1750</span>
             </div>
-
-            <div class="cart__total-row">
+            <div class="checkout__product">
               <span>Shipping:</span>
               <span>Free</span>
             </div>
-
-            <div class="cart__total-row cart__total-row">
+            <div class="checkout__product checkout__product--bold">
               <span>Total:</span>
               <span>$1750</span>
             </div>
-
-            <button class="cart__checkout">Proceed to checkout</button>
+            <div class="checkout__payment">
+              <label><input class="Bank" type="radio"> Bank <img src="../images/Frame 834.svg" alt=""
+                  class="Frame"></label>
+              <label><input type="radio" checked> Cash on delivery</label>
+            </div>
+            <div class="checkout__coupon">
+              <input placeholder="Coupon Code">
+              <button>Apply Coupon</button>
+            </div>
+            <button class="checkout__place">Place Order</button>
           </div>
-
         </div>
-
       </div>
     </section>
   </main>
@@ -183,6 +160,8 @@
         <p class="footer__text">Copyright Rimel 2022. All right reserved</p>
       </div>
     </div>
+
+
   </footer>
 </body>
 
