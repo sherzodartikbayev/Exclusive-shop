@@ -6,13 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Contact</title>
 	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/contact.css">
 </head>
 
 <body>
 
 	<!-- Header -->
 	<header class="header">
-		<div class="header__container container">
+		<section class="top__header">
 			<div class="header__top">
 				<div class="header__top__left">
 					<a href="#" class="top__links">Summer Sale For All Swim Suits And Free Express Delivery - OFF
@@ -25,12 +26,14 @@
 					<img src="./images/header/dropdown.svg" alt="" />
 				</div>
 			</div>
+		</section>
+		<div class="header__container container">
 
 			<nav class="navbar">
 				<h3 class="navbar__title">Exclusive</h3>
 				<ul class="nav__list">
 					<li><a href="../index.html" class="nav__list__item">Home</a></li>
-					<li><a href="./contact.html" class="nav__list__item">Contact</a></li>
+					<li><a href="#" class="nav__list__item">Contact</a></li>
 					<li><a href="./about.html" class="nav__list__item">About</a></li>
 					<li><a href="./auth/register.html" class="nav__list__item">Sign Up</a></li>
 				</ul>
@@ -38,11 +41,12 @@
 					<form action="" class="navbar__form">
 						<input type="text" class="form__input" placeholder="What are you looking for?" />
 						<button type="submit" class="form__btn">
-							<img src="./images/header/search.svg" alt="" />
+							<img src="../images/header/search.svg" alt="" />
 						</button>
 					</form>
-					<img src="./images/header/heart.svg" alt="" />
-					<img src="./images/header/cart.svg" alt="" />
+					<img src="../images/header/heart.svg" alt="" />
+					<img src="../images/header/cart.svg" alt="" />
+					<img src="../images/header/user.svg" alt="">
 				</div>
 			</nav>
 		</div>
@@ -50,7 +54,50 @@
 
 	<!-- Main -->
 	<main>
-
+		<!-- Section Contact -->
+		<section class="contact">
+			<div class="container contact__container">
+				<div class="contact__top">
+					<a href="../index.html" class="contact__top__link">Home <span>/</span>
+					</a>
+					<a href="#" class="contact__top__link">Cantact
+					</a>
+				</div>
+	
+				<div class="contact__flex">
+					<div class="contact__left">
+						<div class="contact__left__box">
+							<div class="contact__left__top">
+								<img src="../images/contact page/icons-phone.svg" alt="" class="contact__icon">
+								<h5 class="contact__left__miniTitle">Call To Us</h5>
+							</div>
+							<p class="contact__left__text">We are available 24/7, 7 days a week.</p>
+							<p class="contact__left__text">Phone: +8801611112222</p>
+						</div>
+						<div class="contact__left__box">
+							<div class="contact__left__top">
+								<img src="../images/contact page/icons-mail.svg" alt="" class="contact__icon">
+								<h5 class="contact__left__miniTitle">Write To Us</h5>
+							</div>
+							<p class="contact__left__text">Fill out our form and we will contact <br> you within 24 hours.</p>
+							<p class="contact__left__text">Emails: customer@exclusive.com</p>
+							<p class="contact__left__text">Emails: support@exclusive.com</p>
+						</div>
+					</div>
+					<div class="contact__right">
+						<form action="" class="contact__form">
+							<div class="contact__input__box">
+								<input type="text" class="contact__input"
+								placeholder="Your Name *" >
+								<input type="text" class="contact__input" placeholder="Your Email *">
+								<input type="text" class="contact__input" placeholder="Your Phone *">
+							</div>
+							<input type="text" class="contact__big__input" placeholder="Your Message">
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 
 	<!-- Footer -->
