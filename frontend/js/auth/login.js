@@ -2,6 +2,7 @@ const form = document.querySelector('#form')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const loginBtn = document.querySelector('#login__btn')
+const toggleHidePassword = document.querySelector('.password-hide-toggle')
 
 form.addEventListener('submit', e => {
 	e.preventDefault()
@@ -29,6 +30,8 @@ async function login(data) {
 		if (req.ok) {
 			alert('You successfully log in!')
 			window.location = '/index.html'
+		} else {
+			alert('Something went wrong. Please try again!')
 		}
 
 		console.log(req.status, req.statusText)
@@ -39,3 +42,13 @@ async function login(data) {
 		loginBtn.textContent = state = 'Log In'
 	}
 }
+
+toggleHidePassword.addEventListener('click', () => {
+	const type = password.getAttribute('type')
+
+	if (type === 'password') {
+		password.setAttribute('type', 'text')
+	} else {
+		password.setAttribute('type', 'password')
+	}
+})

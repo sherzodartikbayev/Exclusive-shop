@@ -3,6 +3,7 @@ const name = document.querySelector('#name')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const registerBtn = document.querySelector('#register__btn')
+const toggleHidePassword = document.querySelector('.password-hide-toggle')
 
 form.addEventListener('submit', e => {
 	e.preventDefault()
@@ -43,3 +44,13 @@ async function register(data) {
 		registerBtn.textContent = state = 'Create Account'
 	}
 }
+
+toggleHidePassword.addEventListener('click', () => {
+	const type = password.getAttribute('type')
+
+	if (type === 'password') {
+		password.setAttribute('type', 'text')
+	} else {
+		password.setAttribute('type', 'password')
+	}
+})

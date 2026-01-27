@@ -28,7 +28,9 @@
     </section>
     <div class="header__container container">
       <nav class="navbar">
-        <h3 class="navbar__title">Exclusive</h3>
+        <a href="../../index.html">
+          <h3 class="navbar__title">Exclusive</h3>
+        </a>
         <ul class="nav__list">
           <li><a href="../../index.html" class="nav__list__item">Home</a></li>
           <li><a href="../contact.html" class="nav__list__item">Contact</a></li>
@@ -62,7 +64,15 @@
           <form action="" class="login__form" id="form">
             <input type="text" class="login__input" placeholder="Name" name="name" id="name" required />
             <input type="email" class="login__input" placeholder="Email" name="email" id="email" required />
-            <input type="password" class="login__input" placeholder="Password" name="password" id="password" required />
+
+            <div class="password-hide">
+              <input type="password" class="login__input" placeholder="Password" name="password" id="password"
+                required />
+
+              <div class="password-hide-toggle">
+                <img src="../../images/flash/eye.svg" alt="eye">
+              </div>
+            </div>
 
             <div class="login__btn__box">
               <button type="submit" class="login__btn" id="register__btn">Create Account</button>

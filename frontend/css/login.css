@@ -35,6 +35,17 @@
 	gap: 40px;
 }
 
+.password-hide {
+	position: relative;
+}
+
+.password-hide-toggle {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	cursor: pointer;
+}
+
 .login__input {
 	padding: 8px;
 	width: 370px;

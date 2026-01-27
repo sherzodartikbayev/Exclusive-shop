@@ -28,9 +28,13 @@ async function resetPassword(data) {
 			body: JSON.stringify(data),
 		})
 
+		const reqJson = await req.json()
+
 		if (req.ok) {
 			alert('Password reset successfully. You can now log in!')
 			window.location = '../../pages/auth/login.html'
+		} else {
+			alert(reqJson.message)
 		}
 
 		console.log(req.status, req.statusText)
