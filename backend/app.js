@@ -11,7 +11,7 @@ const app = express()
 // Middlewares
 app.use(
 	cors({
-		origin: process.env.FRONTEND_URL || '*',
+		origin: process.env.FRONTEND_URL,
 		credentials: true,
 	}),
 )
@@ -25,12 +25,14 @@ app.use(
 			secure: false,
 			httpOnly: true,
 			sameSite: 'lax',
+			maxAge: 24 * 60 * 60 * 1000,
 		},
 	}),
 )
 
 // Routes
 app.use('/auth', require('./routes/auth.route'))
+app.use('/admin', require('./routes/admin.route'))
 
 app.use(errorMiddleware)
 
