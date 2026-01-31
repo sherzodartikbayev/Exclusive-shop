@@ -30,7 +30,7 @@
     </section>
     <div class="header__container container">
 
-      <nav class="navbar">
+      <!-- <nav class="navbar">
         <a href="./">
           <h3 class="navbar__title">Exclusive</h3>
         </a>
@@ -50,7 +50,45 @@
           <img src="./images/header/heart.svg" alt="" />
           <img src="./images/header/cart.svg" alt="" />
         </div>
+      </nav> -->
+
+        <nav class="navbar">
+        <a href="./">
+          <h3 class="navbar__title">Exclusive</h3>
+        </a>
+        <ul class="nav__list">
+          <li><a href="./" class="nav__list__item">Home</a></li>
+          <li><a href="./pages/contact.html" class="nav__list__item">Contact</a></li>
+          <li><a href="./pages/about.html" class="nav__list__item">About</a></li>
+          <li><a href="./pages/auth/register.html" class="nav__list__item">Sign Up</a></li>
+        </ul>
+        <div class="navbar__right">
+          <form action="" class="navbar__form">
+            <input type="text" class="form__input" placeholder="What are you looking for?" />
+            <button type="submit" class="form__btn">
+              <img src="./images/header/search.svg" alt="" />
+            </button>
+          </form>
+         <a href="./pages/wishlist.html"><img src="./images/header/heart.svg" alt="" /></a> 
+          <a href="./pages/cart.html"><img src="./images/header/cart.svg" alt="" /></a>
+<!-- Dropdown -->
+  <div class="user" id="user">
+  <div class="user__btn" id="userBtn">
+     <img src="./images/header/user.svg" alt="" class="hover">
+  </div>
+  <div class="user__dropdown" id="userDropdown">
+   <div class="user__item">Manage My Account</div>
+    <div class="user__item">My Order</div>
+    <div class="user__item">My Cancellations</div>
+    <div class="user__item">My Reviews</div>
+    <div class="user__item user__item--logout">Logout</div>
+  </div>
+</div>
+
+
+        </div>
       </nav>
+
     </div>
   </header>
 
