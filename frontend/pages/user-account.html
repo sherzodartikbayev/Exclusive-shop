@@ -4,11 +4,193 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/index.css">	
+	<link rel="stylesheet" href="../css/user.css">
 	<title>Your Account</title>
 </head>
 
 <body>
+	<header class="header">
+		<section class="top__header">
+		  <div class="header__top">
+			<div class="header__top__left">
+			  <a href="#" class="top__links">Summer Sale For All Swim Suits And Free Express Delivery - OFF
+				50%!
+			  </a>
+			  <a href="#" class="top__links__bold">ShopNow</a>
+			</div>
+	
+			<div class="main__image-wrapper">
+			  <div class="header__top__right">
+				<a href="#" class="top__links">English</a>
+				<img src="./images/header/dropdown.svg" alt="" />
+	
+			  </div>
+			</div>
+		</section>
+		<div class="header__container container">
+	
+		  <nav class="navbar">
+			<a href="./">
+			  <h3 class="navbar__title">Exclusive</h3>
+			</a>
+			<ul class="nav__list">
+			  <li><a href="./" class="nav__list__item">Home</a></li>
+			  <li><a href="./pages/contact.html" class="nav__list__item">Contact</a></li>
+			  <li><a href="./pages/about.html" class="nav__list__item">About</a></li>
+			  <li><a href="./pages/auth/register.html" class="nav__list__item">Sign Up</a></li>
+			</ul>
+			<div class="navbar__right">
+			  <form action="" class="navbar__form">
+				<input type="text" class="form__input" placeholder="What are you looking for?" />
+				<button type="submit" class="form__btn">
+				  <img src="./images/header/search.svg" alt="" />
+				</button>
+			  </form>
+			  <img src="./images/header/heart.svg" alt="" />
+			  <img src="./images/header/cart.svg" alt="" />
+			</div>
+		  </nav>
+		</div>
+	  </header>
+	  
+  <div class="top__container container">
+    <div>Home / <span class="stong">My Account</span></div>
+    <div>Welcome! <span class="top__marked">Md Rimel</span></div>
+  </div>
 
+  <div class="container user__flex">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h4>Manage My Account</h4>
+      <ul>
+        <li class="active">My Profile</li>
+        <li>Address Book</li>
+        <li>My Payment Options</li>
+      </ul>
+
+      <h4>My Orders</h4>
+      <ul>
+        <li>My Returns</li>
+        <li>My Cancellations</li>
+      </ul>
+
+      <h4>My WishList</h4>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <h2>Edit Your Profile</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" value="Md">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" value="Rimel">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" value="rimelll@gmail.com">
+        </div>
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text" value="Kingston, 5236, United State">
+        </div>
+      </div>
+
+      <div class="password">
+        <label>Password Changes</label>
+        <input type="password" placeholder="Current Password">
+        <input type="password" placeholder="New Password">
+        <input type="password" placeholder="Confirm New Password">
+      </div>
+
+      <div class="buttons">
+        <button class="cancel">Cancel</button>
+        <button class="save">Save Changes</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__flex">
+        <div class="">
+          <h1 class="footer__title">Exclusive</h1>
+          <h4 class="footer__subtitle">Subscribe</h4>
+          <div class="footer__text__box">
+            <a href="#" class="footer__text">Get 10% off your first order</a>
+            <form action="" class="footer__form">
+              <input type="text" class="footer__form__input" placeholder="Enter your email">
+              <button type="submit" class="footer__form__btn"><img src="/frontend/images/Login page/send icon.svg"
+                  alt=""></button>
+            </form>
+          </div>
+        </div>
+
+        <div class="">
+          <h4 class="footer__subtitle">Support</h4>
+          <div class="footer__text__box">
+            <a href="#" class="footer__text">111 Bijoy sarani, Dhaka, <br> DH 1515, Bangladesh.</a>
+            <a href="#" class="footer__text">exclusive@gmail.com</a>
+            <a href="#" class="footer__text">+88015-88888-9999</a>
+          </div>
+        </div>
+
+        <div class="">
+          <h4 class="footer__subtitle">Account</h4>
+          <div class="footer__text__box">
+            <a href="#" class="footer__text">My Account</a>
+            <a href="#" class="footer__text">Login / Register</a>
+            <a href="#" class="footer__text">Cart</a>
+            <a href="#" class="footer__text">Wishlist</a>
+            <a href="#" class="footer__text">Shop</a>
+          </div>
+        </div>
+
+        <div class="">
+          <h4 class="footer__subtitle">Quick Link</h4>
+          <div class="footer__text__box">
+            <a href="#" class="footer__text">Privacy Policy</a>
+            <a href="#" class="footer__text">Terms Of Use</a>
+            <a href="#" class="footer__text">FAQ</a>
+            <a href="#" class="footer__text">Contact</a>
+          </div>
+        </div>
+
+        <div class="">
+          <h4 class="footer__subtitle">Download App</h4>
+          <a href="#" class="footer__mini__text">Save $3 with App New User Only</a>
+          <div class="footer__source__box">
+            <img src="/frontend/images/Login page/QR Code.png" alt="">
+            <div class="download__box">
+              <img src="/frontend/images/Login page/google play.png" alt="">
+              <img src="/frontend/images/Login page/appstore.png" alt="">
+            </div>
+          </div>
+          <div class="footer__social__box">
+            <img src="/frontend/images/Login page/Facebook.svg" alt="">
+            <img src="/frontend/images/Login page/Twitter.svg" alt="">
+            <img src="/frontend/images/Login page/Instagram.svg" alt="">
+            <img src="/frontend/images/Login page/Linkedin.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <img src="/frontend/images/Login page/icon copyright.svg" alt="">
+        <p class="footer__text">Copyright Rimel 2022. All right reserved</p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
