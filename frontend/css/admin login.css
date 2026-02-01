@@ -1,0 +1,55 @@
+.adminLog__container {
+  padding: 237px 435px;
+}
+
+.adminLog__title {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 30px;
+  letter-spacing: 4%;
+  margin-bottom: 24px;
+  color: black;
+}
+
+.adminLog__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  margin-bottom: 48px;
+  color: black;
+}
+
+.adminLog__form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.adminLog__input {
+  width: 370px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  padding-bottom: 8px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(118, 118, 118);
+  color: black;
+}
+
+.adminLog__btn {
+    width: 143px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 48px;
+  cursor: pointer;
+  background-color: #DB4444;
+  color: #fafafa;
+}
