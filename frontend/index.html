@@ -1,13 +1,12 @@
-<!doctype html>
+<!Doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Products Page</title>
-  <link rel="stylesheet" href="./css/index.css" />
-  <link rel="icon" href="./images/DOLLAR.svg" />
-</head>
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>Products Page</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="icon" href="./images/DOLLAR.svg" />
+  </head>
 <body>
   <!-- Header -->
   <header class="header">
@@ -30,7 +29,7 @@
     </section>
     <div class="header__container container">
 
-      <nav class="navbar">
+      <!-- <nav class="navbar">
         <a href="./">
           <h3 class="navbar__title">Exclusive</h3>
         </a>
@@ -50,11 +49,56 @@
           <img src="./images/header/heart.svg" alt="" />
           <img src="./images/header/cart.svg" alt="" />
         </div>
+      </nav> -->
+
+        <nav class="navbar">
+        <a href="./">
+          <h3 class="navbar__title">Exclusive</h3>
+        </a>
+        <ul class="nav__list">
+          <li><a href="./" class="nav__list__item">Home</a></li>
+          <li><a href="./pages/contact.html" class="nav__list__item">Contact</a></li>
+          <li><a href="./pages/about.html" class="nav__list__item">About</a></li>
+          <li><a href="./pages/auth/register.html" class="nav__list__item">Sign Up</a></li>
+        </ul>
+        <div class="navbar__right">
+          <form action="" class="navbar__form">
+            <input type="text" class="form__input" placeholder="What are you looking for?" />
+            <button type="submit" class="form__btn">
+              <img src="./images/header/search.svg" alt="" />
+            </button>
+          </form>
+         <a href="./pages/wishlist.html"><img src="./images/header/heart.svg" alt="" /></a> 
+          <a href="./pages/cart.html"><img src="./images/header/cart.svg" alt="" /></a>
+<!-- Dropdown -->
+  <div class="user" id="user">
+  <div class="user__btn" id="userBtn">
+     <img src="./images/header/user.svg" alt="" class="hover">
+  </div>
+  <div class="user__dropdown" id="userDropdown">
+   <div class="user__item">Manage My Account</div>
+    <div class="user__item">My Order</div>
+    <div class="user__item">My Cancellations</div>
+    <div class="user__item">My Reviews</div>
+    <div class="user__item user__item--logout">Logout</div>
+  </div>
+</div>
+
+
+        </div>
       </nav>
+
     </div>
   </header>
 
   <main>
+
+<!-- js -->
+    <script src="./js/script.js"></script>
+    <!-- js -->
+
+
+
     <!-- Hero -->
     <section class="hero">
       <div class="container hero__container">
@@ -354,7 +398,7 @@
             <a href="#" class="footer__text">Get 10% off your first order</a>
             <form action="" class="footer__form">
               <input type="text" class="footer__form__input" placeholder="Enter your email">
-              <button type="submit" class="footer__form__btn"><img src="/frontend/images/Login page/send icon.svg"
+              <button type="submit" class="footer__form__btn"><img src="./images/Login page/send icon.svg"
                   alt=""></button>
             </form>
           </div>
@@ -395,22 +439,22 @@
           <h4 class="footer__subtitle">Download App</h4>
           <a href="#" class="footer__mini__text">Save $3 with App New User Only</a>
           <div class="footer__source__box">
-            <img src="/frontend/images/Login page/QR Code.png" alt="">
+            <img src="./images/Login page/QR Code.png" alt="">
             <div class="download__box">
-              <img src="/frontend/images/Login page/google play.png" alt="">
-              <img src="/frontend/images/Login page/appstore.png" alt="">
+              <img src="./images/Login page/google play.png" alt="">
+              <img src="./images/Login page/appstore.png" alt="">
             </div>
           </div>
           <div class="footer__social__box">
-            <img src="/frontend/images/Login page/Facebook.svg" alt="">
-            <img src="/frontend/images/Login page/Twitter.svg" alt="">
-            <img src="/frontend/images/Login page/Instagram.svg" alt="">
-            <img src="/frontend/images/Login page/Linkedin.svg" alt="">
+            <img src="./images/Login page/Twitter.svg" alt="">
+            <img src="./images/Login page/Facebook.svg" alt="">
+            <img src="./images/Login page/Instagram.svg" alt="">
+            <img src="./images/Login page/Linkedin.svg" alt="">
           </div>
         </div>
       </div>
       <div class="footer__bottom">
-        <img src="/frontend/images/Login page/icon copyright.svg" alt="">
+        <img src="./images/Login page/icon copyright.svg" alt="">
         <p class="footer__text">Copyright Rimel 2022. All right reserved</p>
       </div>
     </div>
@@ -419,3 +463,4 @@
 </body>
 
 </html>
+

@@ -31,7 +31,7 @@ body {
   margin-top: 34px;
   font-family: Inter;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 24px;
   letter-spacing: 3%;
 }
@@ -39,14 +39,14 @@ body {
 .products {
   margin: 0;
   padding: 0;
-  color: #000000;
+  color: #363738;
   margin-top: 34px;
   display: flex;
   gap: 34px;
   font-family: Poppins;
   font-weight: 400;
   font-style: Regular;
-  font-size: 8px;
+  font-size: 7px;
   line-height: 24px;
   letter-spacing: 0%;
   text-align: center;
@@ -62,13 +62,20 @@ body {
 
 .new__product {
   margin: 0;
-  padding: 0px 600px;
+  padding: 0px 580px;
   margin-top: 160px;
   font-size: 20px;
   color: #db4444;
 }
 
 /*  */
+
+.input__title {
+  margin: 0;
+  padding: 0;
+  margin-top: 35px;
+}
+
 .form {
   max-width: 760px;
   margin: 0 auto;
@@ -103,7 +110,7 @@ input {
 }
 
 .wide {
-  width: 100%;
+  width: 730px;
   margin-bottom: 20px;
 }
 

@@ -108,14 +108,10 @@ class AuthController {
 	async sendOtp(req, res) {
 		try {
 			const email = req.body.email.trim().toLowerCase()
-			if (!email) {
-				return res.status(401).json({ message: 'Email is required.' })
-			}
+			if (!email) return res.status(400).json({ message: 'Email is required.' })
 
 			const user = await userModel.findOne({ email })
-			if (!user) {
-				return res.status(404).json({ message: 'User not found.' })
-			}
+			if (!user) return res.status(404).json({ message: 'User not found.' })
 
 			const existingOtp = await otpModel
 				.findOne({ user: user._id })
@@ -123,129 +119,82 @@ class AuthController {
 
 			if (
 				existingOtp &&
-				existingOtp.otpLastSent &&
 				Date.now() - existingOtp.otpLastSent.getTime() < 1 * 60 * 1000
 			) {
-				return res.status(400).json({
-					message:
-						'An OTP was already sent recently. Please wait 1 minute before requesting a new one.',
-				})
+				return res.status(400).json({ message: 'Please wait 1 minute.' })
 			}
 
-			const otp = Math.floor(100000 + Math.random() * 900000).toString() // 6-digit OTP
+			const otp = Math.floor(100000 + Math.random() * 900000).toString()
 			const hashedOTP = await bcrypt.hash(otp, 10)
 
-			const otpData = {
+			await otpModel.create({
 				user: user._id,
 				otpHash: hashedOTP,
-				otpTires: 0,
 				otpLastSent: new Date(),
 				otpExpiresAt: new Date(Date.now() + 10 * 60 * 1000),
-			}
+			})
 
-			await otpModel.create(otpData)
 			await sendOtpEmail(email, user.name, otp)
 
-			req.session.uid = user._id
-			return res.status(200).json({
-				message: 'OTP has been sent to your email. Please check your inbox.',
-			})
+			// Sessiya shart emas, lekin xohlasangiz qoldirishingiz mumkin
+			return res.status(200).json({ message: 'OTP sent successfully!' })
 		} catch (error) {
-			console.log(error)
+			res.status(500).json({ message: 'Server error' })
 		}
 	}
 
 	async verifyOtp(req, res) {
 		try {
-			const userId = req.session.uid
-			if (!userId) {
-				return res
-					.status(400)
-					.json({ message: 'Session expired. Please try again.' })
-			}
+			const { email, otp } = req.body
 
-			const otp = req.body.otp.trim()
-			if (!otp) {
-				return res.status(400).json({ message: 'OTP is required.' })
-			}
+			const user = await userModel.findOne({
+				email: email.trim().toLowerCase(),
+			})
 
-			const user = await userModel.findById(userId)
-			if (!user) {
-				return res.status(404).json({ message: 'User not found.' })
-			}
+			if (!user) return res.status(404).json({ message: 'User not found.' })
 
 			const otpData = await otpModel
-				.findOne({ user: userId })
+				.findOne({ user: user._id })
 				.sort({ createdAt: -1 })
-			if (!otpData) {
-				res.status(404).json({ message: 'No OTP found for this user.' })
-			}
+			if (!otpData) return res.status(404).json({ message: 'No OTP found.' })
 
 			if (otpData.otpExpiresAt < new Date()) {
-				await otpModel.deleteMany({ user: userId })
-				return res.status(401).json({
-					message: 'OTP has expired. Please wait 1 minute for new one.',
-				})
+				await otpModel.deleteMany({ user: user._id })
+				return res.status(401).json({ message: 'OTP expired.' })
 			}
 
-			const isMatch = await bcrypt.compare(otp, otpData.otpHash)
+			const isMatch = await bcrypt.compare(otp.trim(), otpData.otpHash)
 			if (!isMatch) {
 				otpData.otpTires += 1
 				await otpData.save()
-
-				if (otpData.otpTires >= 3) {
-					await otpModel.deleteMany({ user: userId })
-					return res
-						.status(400)
-						.json({ message: 'Too many attempts. Please request a new OTP.' })
-				}
-
-				return res
-					.status(401)
-					.json({ message: 'Invalid OTP. Please try again.' })
+				return res.status(401).json({ message: 'Invalid OTP.' })
 			}
 
-			await otpModel.deleteMany({ user: userId })
-			return res.status(200).json({
-				message: 'OTP verified successfully. You can now reset your password.',
-			})
+			await otpModel.deleteMany({ user: user._id })
+			return res.status(200).json({ message: 'OTP verified successfully.' })
 		} catch (error) {
-			console.log(error)
 			res.status(500).json({ message: 'Internal Server Error' })
 		}
 	}
 
 	async resetPassword(req, res) {
 		try {
-			const userId = req.session.uid
-			if (!userId) {
-				return res
-					.status(401)
-					.json({ message: 'Session expired. Please try again.' })
-			}
-
-			const { password, confirmPassword } = req.body
-			if (!password || !confirmPassword) {
-				return res.status(400).json({ message: 'Both fields are required.' })
-			}
+			const { email, password, confirmPassword } = req.body
 
 			if (password !== confirmPassword) {
-				return res.status(401).json({ message: 'Passwords do not match.' })
+				return res.status(400).json({ message: 'Passwords do not match.' })
 			}
 
-			const user = await userModel.findById(userId)
-			if (!user) {
-				return res.status(404).json({ message: 'User not found' })
-			}
+			const user = await userModel.findOne({
+				email: email.trim().toLowerCase(),
+			})
+			if (!user) return res.status(404).json({ message: 'User not found' })
 
 			user.password = await bcrypt.hash(password, 10)
 			await user.save()
 
-			return res
-				.status(200)
-				.json({ message: 'Password reset successfully. You can now log in' })
+			return res.status(200).json({ message: 'Password reset successfully.' })
 		} catch (error) {
-			console.log(error)
 			res.status(500).json({ message: 'Internal Server Error' })
 		}
 	}
