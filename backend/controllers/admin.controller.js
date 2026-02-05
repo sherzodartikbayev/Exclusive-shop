@@ -1,6 +1,34 @@
+const bcrypt = require('bcrypt')
 const productModel = require('../models/product.model')
+const userModel = require('../models/user.model')
 
 class AdminController {
+	async login(req, res) {
+		try {
+			const { email, password } = req.body
+
+			const user = await userModel.findOne({ email })
+
+			if (!user) {
+				return res.status(404).json({ message: 'Admin not found' })
+			}
+
+			if (!user.isAdmin) {
+				return res.status(400).json({ message: 'You are not admin' })
+			}
+
+			const correctPassword = await bcrypt.compare(password, user.password)
+
+			if (!correctPassword) {
+				return res.status(400).json({ message: 'Your password is incorrect' })
+			}
+
+			return res.status(200).json(user)
+		} catch (error) {
+			console.log(error)
+		}
+	}
+
 	async getProducts(req, res) {
 		try {
 			const products = await productModel.find()
