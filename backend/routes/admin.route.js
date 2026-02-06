@@ -2,6 +2,8 @@ const adminController = require('../controllers/admin.controller')
 
 const router = require('express').Router()
 
+router.post('/login', adminController.login)
+
 router.get('/all-products', adminController.getProducts)
 router.get('/product/:id', adminController.getProduct)
 
