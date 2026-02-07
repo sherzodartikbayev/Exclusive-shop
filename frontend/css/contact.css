@@ -2,6 +2,9 @@
   padding: 80px 135px 140px 135px;
 }
 
+.navbar__title{
+  color: #000;
+}
 .contact__flex {
   display: flex;
   align-items: first baseline;

@@ -29,6 +29,9 @@ input {
   padding: 0 135px;
 }
 
+.navbar__title{
+  color: #000;
+}
 .top__header {
   background-color: black;
 }
