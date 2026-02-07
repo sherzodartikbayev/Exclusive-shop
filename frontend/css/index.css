@@ -319,16 +319,35 @@ li {
 }
 
 /* flash card */
+.flash__card__box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 30px;
+}
 
 .flash__card {
 	width: 270px;
 	margin-top: 40px;
 }
 
+.flash__card__top__image {
+	width: 270px;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flash__card__top__image img {
+	width: 220px;
+	height: 200px;
+}
+
 .flash__card__top {
 	position: relative;
 	background-color: #f5f5f5;
-	padding: 49px;
 }
 
 .flash__card__title {
