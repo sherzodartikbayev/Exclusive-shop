@@ -1,10 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 .login__container {
 	padding: 60px 135px 140px 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-
+.navbar__title{
+	color: #000;
+}
 .login__title {
 	font-family: 'Inter', sans-serif;
 	font-weight: 500;
