@@ -1,70 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Create</title>
-    <link rel="stylesheet" href="../css/admin-creat.css" />
-  </head>
-  <body>
-    <header>
-      <div class="admin__products">
-        <div class="admin">
-          <h1>Admin</h1>
-        </div>
 
-        <div class="products">
-          <h1>Products</h1>
-          <h1>Create product</h1>
-        </div>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Create</title>
+  <link rel="stylesheet" href="../../css/admin-creat.css" />
+</head>
 
-    <main>
-      <h1 class="new__product">Create Your New Product</h1>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header__container container">
+      <a href="./admin panel.html" class="logo">Admin</a>
 
-      <!--  -->
+      <ul class="header__navlinks">
+        <li><a href="./admin-create.html">Create product</a></li>
+        <li><a href="#" class="header__navlinks__logout">Log out</a></li>
+      </ul>
+    </div>
+  </header>
 
-      <section class="input__title">
-        <div class="form">
-          <div class="row">
-            <div class="field">
-              <label>Title</label>
-              <input type="text" placeholder="Mp" />
-            </div>
-            <div class="field">
-              <label>Current Price</label>
-              <input type="text" placeholder="5" />
-            </div>
-          </div>
+  <main>
+    <h1 class="new__product">Create Your New Product</h1>
 
-          <div class="row">
-            <div class="field">
-              <label>Image</label>
-              <input type="text" placeholder="rimelllll@gmail.com" />
-            </div>
-            <div class="field">
-              <label>Old Price</label>
-              <input type="text" placeholder="8" />
-            </div>
+    <section class="input__title">
+      <form class="form">
+        <div class="row">
+          <div class="field">
+            <label for="title">Title</label>
+            <input type="text" placeholder="Product name" name="title" id="title" required />
           </div>
 
           <div class="field">
-            <label>Description</label>
-            <input type="text" class="wide" placeholder="product....." />
+            <label for="image">Image</label>
+            <input type="text" placeholder="Product image link" name="image" id="image" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="current-price">Current Price</label>
+            <input type="number" placeholder="5$" name="current-price" id="current-price" min="0" required />
           </div>
 
           <div class="field">
-            <label>Status</label>
-            <input type="text" class="wide" placeholder="In stock" />
-          </div>
-
-          <div class="actions">
-            <button class="cancel">Cancel</button>
-            <button class="create">Create</button>
+            <label for="old-price">Old Price</label>
+            <input type="number" placeholder="8$" name="old-price" id="old-price" min="0" required />
           </div>
         </div>
-      </section>
-    </main>
-  </body>
+
+        <div class="field">
+          <label for="description">Description</label>
+          <textarea type="text" class="wide" placeholder="product....." name="description" id="description" required
+            minlength="30"> </textarea>
+        </div>
+
+        <div class="actions">
+          <button class="cancel">Cancel</button>
+          <button class="create" type="submit">Create</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="../../js/admin/admin-create.js"></script>
+</body>
+
 </html>

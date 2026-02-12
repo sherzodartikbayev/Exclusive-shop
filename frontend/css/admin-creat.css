@@ -1,55 +1,87 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
-  margin: 0;
-  padding: 0;
-  /* box-sizing: border-box; */
-  font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	/* box-sizing: border-box; */
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background: #fff;
+	background: #fff;
+}
+
+.header__container {
+	padding: 20px 135px;
+	border-bottom: 1px solid rgb(200, 200, 200);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-family: 'Inter', sans-serif;
+	font-weight: 700;
+	letter-spacing: 3%;
+	font-size: 24px;
+	text-decoration: none;
+	color: #000;
+}
+
+.header__navlinks {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	list-style: none;
+}
+
+.header__navlinks li a {
+	text-decoration: none;
+	color: #000;
+	font-weight: 500;
+	font-size: 16px;
 }
 
 .admin__products {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 750px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 750px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
 }
 
 .admin {
-  margin: 0;
-  padding: 0px 135px;
-  background-color: none;
-  color: #000;
-  border: none;
-  color: black;
-  font: Poppins;
-  margin-top: 34px;
-  font-family: Inter;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 24px;
-  letter-spacing: 3%;
+	margin: 0;
+	padding: 0px 135px;
+	background-color: none;
+	color: #000;
+	border: none;
+	color: black;
+	font: Poppins;
+	margin-top: 34px;
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 24px;
+	letter-spacing: 3%;
 }
 
 .products {
-  margin: 0;
-  padding: 0;
-  color: #363738;
-  margin-top: 34px;
-  display: flex;
-  gap: 34px;
-  font-family: Poppins;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 7px;
-  line-height: 24px;
-  letter-spacing: 0%;
-  text-align: center;
+	margin: 0;
+	padding: 0;
+	color: #363738;
+	margin-top: 34px;
+	display: flex;
+	gap: 34px;
+	font-family: Poppins;
+	font-weight: 400;
+	font-style: Regular;
+	font-size: 7px;
+	line-height: 24px;
+	letter-spacing: 0%;
+	text-align: center;
 }
 
 /* .inputs {
@@ -61,81 +93,90 @@ body {
 } */
 
 .new__product {
-  margin: 0;
-  padding: 0px 580px;
-  margin-top: 160px;
-  font-size: 20px;
-  color: #db4444;
+	margin: 0;
+	padding: 0px 580px;
+	margin-top: 160px;
+	font-size: 20px;
+	color: #db4444;
 }
 
 /*  */
 
 .input__title {
-  margin: 0;
-  padding: 0;
-  margin-top: 35px;
+	margin: 0;
+	padding: 0;
+	margin-top: 35px;
+	margin-bottom: 80px;
 }
 
 .form {
-  max-width: 760px;
-  margin: 0 auto;
+	max-width: 760px;
+	margin: 0 auto;
 }
 
 .row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	margin-bottom: 20px;
 }
 
 .field {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 label {
-  font-size: 14px;
-  margin-bottom: 8px;
-  color: #000;
+	font-size: 14px;
+	margin-bottom: 8px;
+	color: #000;
 }
 
-input {
-  height: 44px;
-  padding: 0 14px;
-  border-radius: 4px;
-  border: none;
-  background: #f3f3f3;
-  font-size: 14px;
-  color: #555;
+input,
+textarea {
+	height: 44px;
+	padding: 5px 15px;
+	border-radius: 4px;
+	border: none;
+	background: #f3f3f3;
+	font-size: 16px;
+	color: #555;
+	resize: none;
+	outline: none;
+}
+
+textarea {
+	padding: 15px;
+	min-height: 100px;
 }
 
 .wide {
-  width: 730px;
-  margin-bottom: 20px;
+	width: 730px;
+	margin-bottom: 20px;
 }
 
 .actions {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 25px;
-  margin-top: 10px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 25px;
+	margin-top: 10px;
 }
 
 .cancel {
-  background: none;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  color: #000;
+	background: none;
+	border: none;
+	font-size: 14px;
+	cursor: pointer;
+	color: #000;
 }
 
 .create {
-  background: #e34b4b;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 22px;
-  font-size: 14px;
-  cursor: pointer;
+	background: #e34b4b;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	padding: 10px 22px;
+	font-size: 14px;
+	cursor: pointer;
 }
