@@ -19,11 +19,14 @@ async function loginAdmin(data) {
 	try {
 		btn.textContent = state = 'Loading...'
 
-		const req = await fetch('http://localhost:8080/admin/login', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(data),
-		})
+		const req = await fetch(
+			'https://exclusive-shop-yisx.vercel.app/admin/login',
+			{
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(data),
+			},
+		)
 
 		if (req.ok) {
 			alert('You successfully log in!')

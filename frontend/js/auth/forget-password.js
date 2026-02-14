@@ -19,12 +19,15 @@ async function sendOtp(data) {
 	try {
 		submitBtn.textContent = state = 'Loading...'
 
-		const req = await fetch('http://localhost:8080/auth/send-otp', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			credentials: 'include',
-			body: JSON.stringify(data),
-		})
+		const req = await fetch(
+			'https://exclusive-shop-yisx.vercel.app/auth/send-otp',
+			{
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				credentials: 'include',
+				body: JSON.stringify(data),
+			},
+		)
 
 		if (req.ok) {
 			alert('OTP has been sent to your email. Please check your inbox!')

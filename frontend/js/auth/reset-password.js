@@ -21,12 +21,15 @@ async function resetPassword(data) {
 	try {
 		submitBtn.textContent = state = 'Loading...'
 
-		const req = await fetch('http://localhost:8080/auth/reset-password', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			credentials: 'include',
-			body: JSON.stringify(data),
-		})
+		const req = await fetch(
+			'https://exclusive-shop-yisx.vercel.app/auth/reset-password',
+			{
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				credentials: 'include',
+				body: JSON.stringify(data),
+			},
+		)
 
 		const reqJson = await req.json()
 

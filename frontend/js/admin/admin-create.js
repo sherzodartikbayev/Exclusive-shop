@@ -34,11 +34,14 @@ async function createProduct(data) {
 	try {
 		createBtn.textContent = 'Loading...'
 
-		const req = await fetch('http://localhost:8080/admin/product', {
-			headers: { 'Content-Type': 'application/json' },
-			method: 'POST',
-			body: JSON.stringify(data),
-		})
+		const req = await fetch(
+			'https://exclusive-shop-yisx.vercel.app/admin/product',
+			{
+				headers: { 'Content-Type': 'application/json' },
+				method: 'POST',
+				body: JSON.stringify(data),
+			},
+		)
 
 		if (req.status === 201) {
 			form.reset()

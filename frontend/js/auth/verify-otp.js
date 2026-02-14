@@ -21,12 +21,15 @@ async function verifyOtp(data) {
 	try {
 		verifyBtn.textContent = state = 'Loading...'
 
-		const req = await fetch('http://localhost:8080/auth/verify-otp', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			credentials: 'include',
-			body: JSON.stringify(data),
-		})
+		const req = await fetch(
+			'https://exclusive-shop-yisx.vercel.app/auth/verify-otp',
+			{
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				credentials: 'include',
+				body: JSON.stringify(data),
+			},
+		)
 
 		const resData = await req.json()
 

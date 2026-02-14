@@ -23,11 +23,14 @@ async function register(data) {
 	try {
 		registerBtn.textContent = state = 'Loading...'
 
-		const req = await fetch('http://localhost:8080/auth/register', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(data),
-		})
+		const req = await fetch(
+			'https://exclusive-shop-yisx.vercel.app/auth/register',
+			{
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(data),
+			},
+		)
 
 		if (req.ok) {
 			window.location = '../../pages/auth/login.html'

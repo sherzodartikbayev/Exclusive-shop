@@ -11,9 +11,9 @@ logoutBtn.addEventListener('click', () => {
 
 async function renderProducts() {
 	try {
-		const data = await fetch('http://localhost:8080/admin/all-products').then(
-			product => product.json(),
-		)
+		const data = await fetch(
+			'https://exclusive-shop-yisx.vercel.app/admin/all-products',
+		).then(product => product.json())
 
 		productsCount.innerHTML = `(${data.length})`
 
